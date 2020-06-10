@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Tweet Share</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="all">
+    <header>
+      <h1>Tweet Share</h1>
+    </header>
+    <main>
+      <div>
+        <textarea type="text" id="input" name="input" placeholder="ツイート内容をここに記載！&#13;&#10;作成を押すとツイートボタンが表示されます◎&#13;&#10;&#13;&#10;※1行スペースを作りたい場合※&#13;&#10;改行した後に\nを記載すると作成できます(仮)。"></textarea>
+      </div>
+      <div>
+        <input type="text" id="hashtag" placeholder="好きなハッシュタグを追加">
+        <button id="tag-btn" type="button">追加</button>
+      </div>
+      <div>
+        <input type="text" id="hashtagTemp" value="駆け出しエンジニアと繋がりたい" readonly>
+        <button id="tag-btn2" type="button">追加</button>
+      </div>
+      <div>
+        <input type="text" id="hashtagTemp2" value="プログラミング初心者" readonly>
+        <button id="tag-btn3" type="button">追加</button>
+      </div>
+      <div>
+        <input type="text" id="cheerText" value="Posted by:https://chobimusic.com/tweet @masaru_pg" readonly>
+        <button id="cheer-btn" type="button">応援</button>
+      </div>
+      <div>
+        <button id="btn">作成</button>
+      </div>
+      <div>
+        <textarea type="text" id="check" placeholder="ツイートする内容は、&NewLine;ここで確認できるよ！" readonly></textarea>
+      </div>
+      <button id="button" class="display-none">
+        <a id="tweet" target="_blank">ツイート</a>
+      </button>
+    </main>
+    <script src="index.js"></script>
+          
+    </div>
+  </body>
+</html>

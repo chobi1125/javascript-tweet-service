@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TweetShare ver2</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>TweetShare ver2</h1>
+    <textarea type="text" id="input" name="input" placeholder="ツイートしたい内容を書いてね！&#13;&#10;作成を押すとツイートボタンが表示されるよ◎&#13;&#10;&#13;&#10;※改行でスペースを作りたい場合※&#13;&#10;改行した後に\nを記載すると1行分のスペースが作成できます。"></textarea>
+    <div>
+      <button id="btn">作成</button>
+    </div>
+    <div>
+      <textarea type="text" id="check" placeholder="ツイートする内容は、&NewLine;ここで確認できるよ！" readonly></textarea>
+    </div>
+    <button id="button" class="display-none">
+      <a id="tweet" target="_blank">ツイート</a>
+    </button>
+    <script src="index.js"></script>
+  </body>
+</html>

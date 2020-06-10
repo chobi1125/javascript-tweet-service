@@ -1,0 +1,34 @@
+h1 {
+  color: aqua;
+}
+textarea {
+  resize: none;
+  width:300px;
+  height:200px;
+  font-family: "Arial";
+}
+
+.a_button {
+  padding: 0;
+}
+
+a {
+  text-decoration:none;
+  display: block;
+  height: 100%;
+  padding: 0 5px;
+  color: black;
+}
+
+a:visited {
+  color:black;
+}
+
+div {
+  padding-bottom: 10px;
+}
+
+.display-none {
+  display: none;
+  color: black;
+}
