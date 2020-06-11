@@ -3,16 +3,16 @@
   const templateText = [
     //- &#13;&#10;\\n&#13;&#10;で1行スペース
     //- &#13;&#10;で改行
-    "今日の目標&#13;&#10;\\n&#13;&#10;・&#13;&#10;・&#13;&#10;・&#13;&#10;\\n&#13;&#10;意気込み:&#13;&#10;あああ&#13;&#10;\\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者",
-    "学習記録&#13;&#10;\\n&#13;&#10;・&#13;&#10;・&#13;&#10;・&#13;&#10;\\n&#13;&#10;感想と課題:&#13;&#10;あああ&#13;&#10;\\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者",
+    "今日の目標&#13;&#10;\\n&#13;&#10;・&#13;&#10;・&#13;&#10;\\n&#13;&#10;意気込み:&#13;&#10;あああ&#13;&#10;\\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者",
+    "学習記録&#13;&#10;\\n&#13;&#10;・&#13;&#10;・&#13;&#10;\\n&#13;&#10;感想と課題:&#13;&#10;あああ&#13;&#10;\\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者",
     "day000&#13;&#10;today:&#13;&#10;total:&#13;&#10;\\n&#13;&#10;感想と課題:&#13;&#10;あああ&#13;&#10;\\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者",
   ]
   const textareaText = [
-    "ツイート内容をここに記載！&#13;&#10;作成を押すとツイートボタン表示◎&#13;&#10;&#13;&#10;※1行スペースを作りたい場合※&#13;&#10;改行した後に\\nを記載すると作成できます。半角スペースは改行されちゃいます(仮仕様)。",
+    "ツイート内容を記載。&#13;&#10;作成ボタンでツイートボタン表示。&#13;&#10;&#13;&#10;※1行スペースを作りたい場合※&#13;&#10;改行した後に\\nを記載。&#13;&#10;半角スペース非対応、改行されます(仮仕様)。",
     "ツイートする内容は、&#13;&#10;ここで確認できるよ！"
   ]
   const freeTag = "好きなハッシュタグを追加"
-  const cheerText ="Posted by:https://chobimusic.com/tweet"
+  const cheerText ="PostedBy:https://chobimusic.com/tweet"
   const hashtags = [
     {
       name:"Popular",
@@ -64,11 +64,13 @@ html(lang="ja")
             - const tags = hashtag.tag
             each item in tags
               option(value=item) #{item}
-          button(id="select"+hashtag.name+"Btn") 選択
       div
-        input#cheerText(type="text" value=cheerText readonly)
-        button#cheerBtn(type="button") 応援
-      div: button#btn 作成
-      div: textarea#check(type="text" placeholder!=textareaText[1] readonly)
-      button#button.display-none: a#tweet(target="_blank") ツイート
+        //- input#cheerText(type="hidden" value=cheerText)
+        //- button#cheerBtn(type="button") 応援
+        span
+          input#cheerBtn.checkbox(type="checkbox" value=cheerText)
+          label.label-small 応援
+        button#btn 作成
+        button#button.display-none: a#tweet(target="_blank") ツイート
+      div: textarea#check.check-text(type="text" placeholder!=textareaText[1] readonly)
     script(src="index.js")

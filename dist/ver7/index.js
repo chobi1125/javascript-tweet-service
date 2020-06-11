@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }, false);
   const hashtags = ["Popular","Language","Framework","Various"]
   hashtags.forEach(function(value){
-    document.getElementById('select'+value+'Btn').addEventListener('click', function() {
+    document.getElementById('select'+value).addEventListener('change', function() {
       let input = document.getElementById('input');
       let selected = document.getElementById('select'+value).value;
       if(selected === ""){
@@ -28,10 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
   })
   document.getElementById('cheerBtn').addEventListener('click', function() {
     let input = document.getElementById('input');
-    let cheerText = document.getElementById('cheerText');
-    const button = document.getElementById('cheerBtn');
-    input.value = input.value + "\n" + cheerText.value;
-    button.disabled = true
+    let cheerBtn = document.getElementById('cheerBtn');
+    if (cheerBtn.checked === true){
+      input.value = input.value + "\n" + cheerBtn.value;
+    } else {
+      input.value = input.value.replace("\nPostedBy:https://chobimusic.com/tweet", '');
+    }
   }, false);
   document.getElementById('btn').addEventListener('click', function() {
     let input = document.getElementById('input');
@@ -47,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let tweet_url = "https://twitter.com/intent/tweet?text="+ tweetText;
     button.className = "a_button";
     tweet.href = tweet_url;
-    console.log(tweetText);
+    let btn = document.getElementById('btn');
+    btn.textContent = "変更"
   }, false);
 }, false);

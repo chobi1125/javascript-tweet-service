@@ -2,11 +2,16 @@ h1 {
   color: aqua;
   font-size: 30px;
 }
+
 textarea {
   resize: none;
   width:300px;
-  height:200px;
+  height:280px;
   font-family: "Arial";
+}
+
+.check-text {
+  height: 300px;
 }
 
 input {
@@ -21,7 +26,6 @@ select {
 
 .a_button {
   padding: 0;
-
 }
 
 a {
@@ -45,12 +49,26 @@ div {
   color: black;
 }
 
+.check {
+  padding-top: 5px;
+  display: inline-block;
+}
+
+.checkbox {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.label-small{
+  font-size: 80%;
+  padding-right: 10px;
+}
+
 @media screen and (max-width:767px) {
   textarea {
     width: 95%;
-    height:200px;
     font-family: "Arial";
-    font-size: 120%;
+    font-size: 100%;
   }
   input {
     width: 270px;

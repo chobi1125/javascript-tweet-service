@@ -1,0 +1,31 @@
+div
+  -
+    const hashtags = [
+      {
+        name:"Popular",
+        default:"#人気タグ",
+        tag:["駆け出しエンジニアと繋がりたい","プログラミング初心者","プログラミング","プログラミング学習","今日の積み上げ"]
+      },
+      {
+        name:"Language",
+        default:"#言語",
+        tag:["HTML&CSS","JavaScript","PHP","Ruby","Python","Java","SQL","Go","C"]
+      },
+      {
+        name:"Framework",
+        default:"#フレームワーク",
+        tag:["Express","Vue.js","React","Angular","Laravel","RubyonRails","Django"]
+      },
+      {
+        name:"Various",
+        default:"#いろいろ",
+        tag:["TypeScript","Bootstrap","jQuery","Node.js","Sass","Git","Pug","Gulp","Docker","Linux","Progate","Techpit"]
+      }
+    ]
+  each hashtag in hashtags
+    select(id="select"+hashtag.name)
+      option(value="" selected) #{hashtag.default}
+      - const tags = hashtag.tag
+      each item in tags
+        option(value=item) #{item}
+    button(id="select"+hashtag.name+"Btn") 選択

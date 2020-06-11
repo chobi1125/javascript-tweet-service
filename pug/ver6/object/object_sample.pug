@@ -1,0 +1,30 @@
+h2 for：特定の回数ループ
+ul
+  - for (var x = 0; x < 3; x++)
+    li item #{x}
+
+h2 each：配列をループ
+ul
+  - var list = ['1','2','3']
+  each item in list
+    li item #{item}
+    
+h2 ついでに連想配列each
+ul
+  -
+    var list = [
+      {
+        num: 1,
+        txt: 'aaa.jpg',
+      },
+      {
+        num: 2,
+        txt: 'bbb.jpg',
+      },
+      {
+        num: 3,
+        txt: 'ccc.jpg',
+      },
+    ]
+  each item in list
+    li item #{item.num} : #{item.txt}

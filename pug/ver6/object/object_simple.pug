@@ -1,0 +1,23 @@
+div
+  -
+    const hashtag = [
+      {
+        name:"Popular",
+        default:"#人気タグ",
+      },
+      {
+        name:"Language",
+        default:"#言語",
+      },
+      {
+        name:"Framework",
+        default:"#フレームワーク",
+      },
+      {
+        name:"Various",
+        default:"#いろいろ",
+      }
+    ]
+  p #{hashtag[0].name}
+  each item in hashtag
+      li item #{item.name} : #{item.default}
