@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Twitter Share</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Twitter Share</h1>
+    </header>
+    <main>
+      <div>
+        <textarea id="input" type="text" name="input" placeholder="ツイート内容をここに記載！&#13;&#10;作成を押すとツイートボタンが表示されます◎&#13;&#10;&#13;&#10;※1行スペースを作りたい場合※&#13;&#10;改行した後に\nを記載すると作成できます(仮)。"></textarea>
+      </div>
+      <div>
+        <input id="freeTag" type="text" placeholder="好きなハッシュタグを追加">
+        <button id="freeTagBtn" type="button">追加</button>
+      </div>
+      <div>
+        <input id="pupularTag0" type="text" value="駆け出しエンジニアと繋がりたい" readonly>
+        <button id="pupularTagBtn0" type="button">追加</button>
+      </div>
+      <div>
+        <input id="pupularTag1" type="text" value="プログラミング初心者" readonly>
+        <button id="pupularTagBtn1" type="button">追加</button>
+      </div>
+      <div>
+        <input id="pupularTag2" type="text" value="プログラミング" readonly>
+        <button id="pupularTagBtn2" type="button">追加</button>
+      </div>
+      <div>
+        <input id="cheerText" type="text" value="Posted by:https://chobimusic.com/tweet @masaru_pg" readonly>
+        <button id="cheerBtn" type="button">応援</button>
+      </div>
+      <div>
+        <button id="btn">作成</button>
+      </div>
+      <div>
+        <textarea id="check" type="text" placeholder="ツイートする内容は、&#13;&#10;ここで確認できるよ！" readonly></textarea>
+      </div>
+      <button class="display-none" id="button"><a id="tweet" target="_blank">ツイート</a></button>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

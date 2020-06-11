@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Tweet for PG Study</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Tweet for PG Study</h1>
+    </header>
+    <main>
+      <div>
+        <select id="selectTemplate">
+          <option value="" selected>定型文(使う場合は最初に選択)</option>
+          <option value="今日やりたいこと&#13;&#10;\n&#13;&#10;・&#13;&#10;・&#13;&#10;・&#13;&#10;\n&#13;&#10;(コメント)&#13;&#10;\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者">今日やりたいこと</option>
+          <option value="今日やったこと&#13;&#10;\n&#13;&#10;・&#13;&#10;・&#13;&#10;・&#13;&#10;\n&#13;&#10;(コメント)&#13;&#10;\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者">今日やったこと</option>
+          <option value="day000&#13;&#10;today:&#13;&#10;total:&#13;&#10;\n&#13;&#10;(コメント)&#13;&#10;\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者">学習記録</option>
+        </select>
+      </div>
+      <div>
+        <textarea id="input" type="text" name="input" placeholder="ツイート内容をここに記載！&#13;&#10;作成を押すとツイートボタン表示◎&#13;&#10;&#13;&#10;※1行スペースを作りたい場合※&#13;&#10;改行した後に\nを記載すると作成できます。半角スペースは改行されちゃいます(仮仕様)。"></textarea>
+      </div>
+      <div>
+        <input id="freeTag" type="text" placeholder="好きなハッシュタグを追加">
+        <button id="freeTagBtn" type="button">追加</button>
+      </div>
+      <div>
+        <select id="selectPopular">
+          <option value="" selected>#人気タグ</option>
+          <option value="駆け出しエンジニアと繋がりたい">駆け出しエンジニアと繋がりたい</option>
+          <option value="プログラミング初心者">プログラミング初心者</option>
+          <option value="プログラミング">プログラミング</option>
+          <option value="プログラミング学習">プログラミング学習</option>
+          <option value="今日の積み上げ">今日の積み上げ</option>
+        </select>
+        <button id="selectPopularBtn">選択</button>
+      </div>
+      <div>
+        <select id="selectLanguage">
+          <option value="" selected>#言語</option>
+          <option value="HTML&amp;CSS">HTML&amp;CSS</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="PHP">PHP</option>
+          <option value="Ruby">Ruby</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+          <option value="SQL">SQL</option>
+          <option value="Go">Go</option>
+          <option value="C">C</option>
+        </select>
+        <button id="selectLanguageBtn">選択</button>
+      </div>
+      <div>
+        <select id="selectFramework">
+          <option value="" selected>#フレームワーク</option>
+          <option value="Express">Express</option>
+          <option value="Vue.js">Vue.js</option>
+          <option value="React">React</option>
+          <option value="Angular">Angular</option>
+          <option value="Laravel">Laravel</option>
+          <option value="RubyonRails">RubyonRails</option>
+          <option value="Django">Django</option>
+        </select>
+        <button id="selectFrameworkBtn">選択</button>
+      </div>
+      <div>
+        <select id="selectVarious">
+          <option value="" selected>#いろいろ</option>
+          <option value="TypeScript">TypeScript</option>
+          <option value="Bootstrap">Bootstrap</option>
+          <option value="jQuery">jQuery</option>
+          <option value="Node.js">Node.js</option>
+          <option value="Sass">Sass</option>
+          <option value="Git">Git</option>
+          <option value="Pug">Pug</option>
+          <option value="Gulp">Gulp</option>
+          <option value="Docker">Docker</option>
+          <option value="Linux">Linux</option>
+          <option value="Progate">Progate</option>
+          <option value="Techpit">Techpit</option>
+        </select>
+        <button id="selectVariousBtn">選択</button>
+      </div>
+      <div>
+        <input id="cheerText" type="text" value="Posted by:https://chobimusic.com/tweet" readonly>
+        <button id="cheerBtn" type="button">応援</button>
+      </div>
+      <div>
+        <button id="btn">作成</button>
+      </div>
+      <div>
+        <textarea id="check" type="text" placeholder="ツイートする内容は、&#13;&#10;ここで確認できるよ！" readonly></textarea>
+      </div>
+      <button class="display-none" id="button"><a id="tweet" target="_blank">ツイート</a></button>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+-
+  const ttl = "Tweet for PG Study"
+  const templateText = [
+    //- &#13;&#10;\\n&#13;&#10;で1行スペース
+    //- &#13;&#10;で改行
+    "今日やりたいこと&#13;&#10;\\n&#13;&#10;・&#13;&#10;・&#13;&#10;・&#13;&#10;\\n&#13;&#10;(コメント)&#13;&#10;\\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者",
+    "今日やったこと&#13;&#10;\\n&#13;&#10;・&#13;&#10;・&#13;&#10;・&#13;&#10;\\n&#13;&#10;(コメント)&#13;&#10;\\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者",
+    "day000&#13;&#10;today:&#13;&#10;total:&#13;&#10;\\n&#13;&#10;(コメント)&#13;&#10;\\n&#13;&#10;#駆け出しエンジニアと繋がりたい&#13;&#10;#プログラミング初心者",
+  ]
+  const textareaText = [
+    "ツイート内容をここに記載！&#13;&#10;作成を押すとツイートボタン表示◎&#13;&#10;&#13;&#10;※1行スペースを作りたい場合※&#13;&#10;改行した後に\\nを記載すると作成できます。半角スペースは改行されちゃいます(仮仕様)。",
+    "ツイートする内容は、&#13;&#10;ここで確認できるよ！"
+  ]
+  const freeTag = "好きなハッシュタグを追加"
+  const cheerText ="Posted by:https://chobimusic.com/tweet"
+doctype
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0")
+    title #{ttl}
+    link(rel="stylesheet" href="style.css")
+  body
+    header
+      h1 #{ttl}
+    main
+      div
+        select#selectTemplate
+          option(value="" selected) 定型文(使う場合は最初に選択)
+          option(value!=templateText[0]) 今日やりたいこと
+          option(value!=templateText[1]) 今日やったこと
+          option(value!=templateText[2]) 学習記録
+      div: textarea#input(type="text" name="input" placeholder!=textareaText[0])
+      div
+        input#freeTag(type="text" placeholder=freeTag)
+        button#freeTagBtn(type="button") 追加
+      div
+        select#selectPopular
+          option(value="" selected) #人気タグ
+          - const popular = ["駆け出しエンジニアと繋がりたい","プログラミング初心者","プログラミング","プログラミング学習","今日の積み上げ"]
+          each item in popular
+            option(value=item) #{item}
+        button#selectPopularBtn 選択
+      div
+        select#selectLanguage
+          option(value="" selected) #言語
+          - const language = ["HTML&CSS","JavaScript","PHP","Ruby","Python","Java","SQL","Go","C"]
+          each item in language
+            option(value=item) #{item}
+        button#selectLanguageBtn 選択
+      div
+        select#selectFramework
+          option(value="" selected) #フレームワーク
+          - const framework = ["Express","Vue.js","React","Angular","Laravel","RubyonRails","Django"]
+          each item in framework
+            option(value=item) #{item}
+        button#selectFrameworkBtn 選択
+      div
+        select#selectVarious
+          option(value="" selected) #いろいろ
+          - const various = ["TypeScript","Bootstrap","jQuery","Node.js","Sass","Git","Pug","Gulp","Docker","Linux","Progate","Techpit"]
+          each item in various
+            option(value=item) #{item}
+        button#selectVariousBtn 選択
+      div
+        input#cheerText(type="text" value=cheerText readonly)
+        button#cheerBtn(type="button") 応援
+      div: button#btn 作成
+      div: textarea#check(type="text" placeholder!=textareaText[1] readonly)
+      button#button.display-none: a#tweet(target="_blank") ツイート
+    script(src="index.js")

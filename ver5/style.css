@@ -1,0 +1,74 @@
+h1 {
+  color: aqua;
+}
+textarea {
+  resize: none;
+  width:300px;
+  height:200px;
+  font-family: "Arial";
+}
+
+input {
+  width: 250px;
+}
+
+select {
+  /* width: 250px; */
+  width: 258px;
+  height: 24px;
+}
+
+.a_button {
+  padding: 0;
+
+}
+
+a {
+  text-decoration:none;
+  display: block;
+  height: 100%;
+  padding: 0 5px;
+  color: black;
+}
+
+a:visited {
+  color:black;
+}
+
+div {
+  padding-bottom: 10px;
+}
+
+.display-none {
+  display: none;
+  color: black;
+}
+
+@media screen and (max-width:767px) {
+  textarea {
+    width: 95%;
+    height:200px;
+    font-family: "Arial";
+    font-size: 120%;
+  }
+  input {
+    width: 270px;
+    height: 25px;
+    font-size: 110%;
+    padding: 0;
+  }
+  select {
+    width: 274px;
+    height: 30px;
+    font-size: 110%;
+  }
+  div {
+    padding-bottom: 20px;
+  }
+  button {
+    height: 30px;
+  }
+  a {
+    height: 75%;
+  }
+}  
