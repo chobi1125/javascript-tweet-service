@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/chobi1125/javascript-tweet-service#readme",
   "dependencies": {
-    "pug": "^3.0.0"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
